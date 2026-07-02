@@ -2,7 +2,7 @@
 
 Landing page for the **Awesome AI Builder Series**: 4 curated, anti-hype repositories covering AI idea discovery, venture building, business methodology, and monetization.
 
-Live at: `https://msdw.github.io/awesome-ai-hub/` (once GitHub Pages is enabled on this repo)
+Live at: [msdw.github.io/awesome-ai-hub](https://msdw.github.io/awesome-ai-hub/)
 
 ## The Series
 
@@ -15,10 +15,10 @@ Live at: `https://msdw.github.io/awesome-ai-hub/` (once GitHub Pages is enabled 
 
 - `index.html` — single-page site (self-contained, no build step)
 
-## Setup Required
+## Setup
 
-1. **Formspree**: create a free form at [formspree.io](https://formspree.io), then replace `YOUR_FORM_ID` in `index.html` with the real form ID.
-2. **GitHub Pages**: in repo Settings → Pages, set source to `main` branch, `/ (root)` folder.
+- **Formspree**: [formspree.io/f/xqevgbky](https://formspree.io/f/xqevgbky) — configured
+- **GitHub Pages**: Settings → Pages, source `main` branch, `/ (root)` folder — configured
 
 ## License
 

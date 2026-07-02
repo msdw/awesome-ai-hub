@@ -230,7 +230,7 @@
       <p>New ideas, ventures, examples, and offers — discovered automatically every week, curated by hand. No spam.</p>
 
       <!-- Formspree: replace YOUR_FORM_ID with the ID from your Formspree dashboard -->
-      <form id="subscribe-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="subscribe-form" action="https://formspree.io/f/xqevgbky" method="POST">
         <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
@@ -285,16 +285,6 @@
     <p>Maintained by <a href="mailto:mathurin.ache@advanthink.com">Advanthink</a> · Content licensed CC BY 4.0 · Scripts licensed MIT</p>
   </div>
 </footer>
-
-<script>
-  document.getElementById('subscribe-form').addEventListener('submit', function (e) {
-    var action = this.action;
-    if (action.indexOf('YOUR_FORM_ID') !== -1) {
-      e.preventDefault();
-      alert('Formspree form ID not yet configured. Ask the site owner to finish setup.');
-    }
-  });
-</script>
 
 </body>
 </html>
