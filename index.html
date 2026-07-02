@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awesome AI Builder Series</title>
+<meta name="description" content="Four curated, anti-hype repositories to go from AI idea to venture, business, and revenue.">
+<style>
+  :root {
+    --bg: #0b0d12;
+    --bg-card: #12151c;
+    --border: #22262f;
+    --text: #e8eaed;
+    --text-dim: #9aa1ac;
+    --accent: #6ee7b7;
+    --accent-2: #7dd3fc;
+    --accent-3: #fca5a5;
+    --accent-4: #fcd34d;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  header.hero { padding: 96px 0 56px; text-align: center; }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    margin: 0 0 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  h1 span { color: var(--accent); }
+  .subtitle {
+    font-size: 19px;
+    color: var(--text-dim);
+    max-width: 620px;
+    margin: 0 auto 36px;
+  }
+  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: #06110c; }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+  section { padding: 56px 0; border-top: 1px solid var(--border); }
+  section h2 {
+    font-size: 26px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  section .section-sub { color: var(--text-dim); margin: 0 0 36px; font-size: 15px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card .icon { font-size: 28px; }
+  .card h3 { margin: 0; font-size: 18px; }
+  .card p { margin: 0; color: var(--text-dim); font-size: 14px; flex-grow: 1; }
+  .card a.repo-link {
+    color: var(--accent-2);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .card a.repo-link:hover { text-decoration: underline; }
+  .card.c1 { border-top: 3px solid var(--accent); }
+  .card.c2 { border-top: 3px solid var(--accent-2); }
+  .card.c3 { border-top: 3px solid var(--accent-4); }
+  .card.c4 { border-top: 3px solid var(--accent-3); }
+
+  .path {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .path .arrow { opacity: .5; }
+
+  .form-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .form-box p { color: var(--text-dim); font-size: 14px; margin: 8px 0 20px; }
+  form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  input[type="email"] {
+    flex: 1 1 240px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #0b0d12;
+    color: var(--text);
+    font-size: 15px;
+  }
+  input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .form-note { font-size: 12px; color: var(--text-dim); margin-top: 14px; }
+  .success-msg { display: none; color: var(--accent); font-weight: 600; margin-top: 16px; }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .service {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .service h4 { margin: 0 0 6px; font-size: 15px; }
+  .service p { margin: 0; font-size: 13px; color: var(--text-dim); }
+  .service a { color: var(--accent-2); font-size: 13px; text-decoration: none; font-weight: 600; }
+
+  footer {
+    padding: 40px 0 60px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--text-dim); }
+
+  @media (max-width: 600px) {
+    header.hero { padding: 64px 0 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">4 repos · updated weekly · anti-hype</span>
+    <h1>From AI idea to <span>real revenue</span>.<br>No hype, just structure.</h1>
+    <p class="subtitle">
+      A series of curated, open-source playbooks that take you from a raw AI idea
+      to a validated venture, a working business, and a priced offer.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#subscribe">Get weekly updates</a>
+      <a class="btn btn-ghost" href="#series">Browse the series</a>
+    </div>
+  </div>
+</header>
+
+<section id="series">
+  <div class="wrap">
+    <h2>The Awesome AI Builder Series</h2>
+    <p class="section-sub">Four repos, one path. Start wherever you are.</p>
+
+    <div class="grid">
+      <div class="card c1">
+        <div class="icon">💡</div>
+        <h3>Idea Engine</h3>
+        <p>100+ scored, structured AI ideas — pain points, business models, difficulty, and risk, without income promises.</p>
+        <a class="repo-link" href="https://github.com/msdw/awesome-ai-idea-engine" target="_blank" rel="noopener">View repo →</a>
+      </div>
+      <div class="card c2">
+        <div class="icon">🚀</div>
+        <h3>Venture Playbook</h3>
+        <p>Documented ventures with real outcomes, plus step-by-step playbooks to validate and launch.</p>
+        <a class="repo-link" href="https://github.com/msdw/awesome-ai-venture-playbook" target="_blank" rel="noopener">View repo →</a>
+      </div>
+      <div class="card c3">
+        <div class="icon">🏗</div>
+        <h3>Business Blueprint</h3>
+        <p>A 15-step methodology with 7 canvases and templates to build an AI-powered business end to end.</p>
+        <a class="repo-link" href="https://github.com/msdw/awesome-ai-business-blueprint" target="_blank" rel="noopener">View repo →</a>
+      </div>
+      <div class="card c4">
+        <div class="icon">💰</div>
+        <h3>Monetization Playbook</h3>
+        <p>17 monetization models, real pricing signals, and delivery playbooks to turn AI skills into income.</p>
+        <a class="repo-link" href="https://github.com/msdw/awesome-ai-monetization-playbook" target="_blank" rel="noopener">View repo →</a>
+      </div>
+    </div>
+
+    <div class="path">
+      <span>Idea</span><span class="arrow">→</span>
+      <span>Venture</span><span class="arrow">→</span>
+      <span>Business</span><span class="arrow">→</span>
+      <span>Revenue</span>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe">
+  <div class="wrap">
+    <div class="form-box">
+      <h2 style="font-size:20px;">Get the weekly digest</h2>
+      <p>New ideas, ventures, examples, and offers — discovered automatically every week, curated by hand. No spam.</p>
+
+      <!-- Formspree: replace YOUR_FORM_ID with the ID from your Formspree dashboard -->
+      <form id="subscribe-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="success-msg" id="success-msg">✓ You're in. Check your inbox to confirm.</p>
+      <p class="form-note">One email per week. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work-with-me">
+  <div class="wrap">
+    <h2>Work with me directly</h2>
+    <p class="section-sub">The repos are free. If you want hands-on help applying them to your situation:</p>
+
+    <div class="services">
+      <div class="service">
+        <h4>Discovery Call</h4>
+        <p>30-min call to map your AI opportunity.</p>
+        <a href="mailto:mathurin.ache@advanthink.com?subject=Discovery%20Call%20from%20Awesome%20AI%20Hub">Book a call →</a>
+      </div>
+      <div class="service">
+        <h4>Coaching</h4>
+        <p>1:1 guidance from idea to first customer.</p>
+        <a href="mailto:mathurin.ache@advanthink.com?subject=Coaching%20from%20Awesome%20AI%20Hub">Get in touch →</a>
+      </div>
+      <div class="service">
+        <h4>Consulting</h4>
+        <p>Hands-on AI consulting for teams.</p>
+        <a href="mailto:mathurin.ache@advanthink.com?subject=Consulting%20from%20Awesome%20AI%20Hub">Let's talk →</a>
+      </div>
+      <div class="service">
+        <h4>Training</h4>
+        <p>Workshops and bootcamps for AI builders.</p>
+        <a href="mailto:mathurin.ache@advanthink.com?subject=Training%20from%20Awesome%20AI%20Hub">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sponsor">
+  <div class="wrap">
+    <h2>Sponsor the series</h2>
+    <p class="section-sub">Reach AI builders, founders, and consultants across all 4 repos.</p>
+    <div class="cta-row">
+      <a class="btn btn-ghost" href="https://github.com/msdw/awesome-ai-idea-engine/blob/main/SPONSORS.md" target="_blank" rel="noopener">View sponsorship tiers →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Maintained by <a href="mailto:mathurin.ache@advanthink.com">Advanthink</a> · Content licensed CC BY 4.0 · Scripts licensed MIT</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('subscribe-form').addEventListener('submit', function (e) {
+    var action = this.action;
+    if (action.indexOf('YOUR_FORM_ID') !== -1) {
+      e.preventDefault();
+      alert('Formspree form ID not yet configured. Ask the site owner to finish setup.');
+    }
+  });
+</script>
+
+</body>
+</html>
