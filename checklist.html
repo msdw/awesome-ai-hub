@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Idea Validation Checklist — Awesome AI Builder Series</title>
+<meta name="description" content="A 25-point checklist to validate an AI idea before building — problem, market, customers, and AI fit.">
+<meta property="og:title" content="AI Idea Validation Checklist">
+<meta property="og:description" content="25 checks to run before building your AI product or service. Free, no hype.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://msdw.github.io/awesome-ai-hub/checklist.html">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    --bg: #0b0d12; --bg-card: #12151c; --border: #22262f;
+    --text: #e8eaed; --text-dim: #9aa1ac; --accent: #6ee7b7; --accent-2: #7dd3fc;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.02em; margin: 0 0 8px; }
+  h1 span { color: var(--accent); }
+  .lead { color: var(--text-dim); font-size: 16px; margin-bottom: 8px; }
+  .meta { color: var(--text-dim); font-size: 13px; margin-bottom: 40px; }
+  .meta a { color: var(--accent-2); text-decoration: none; }
+  h2 { font-size: 20px; margin: 40px 0 4px; color: var(--accent); }
+  .section-note { color: var(--text-dim); font-size: 14px; margin: 0 0 16px; }
+  ul.checks { list-style: none; padding: 0; margin: 0; }
+  ul.checks li {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 16px 12px 44px; margin-bottom: 8px; position: relative; font-size: 15px;
+  }
+  ul.checks li::before {
+    content: "☐"; position: absolute; left: 16px; top: 11px;
+    color: var(--accent); font-size: 17px;
+  }
+  ul.checks li b { color: var(--text); }
+  ul.checks li .why { display: block; color: var(--text-dim); font-size: 13px; margin-top: 2px; }
+  .rule {
+    border-left: 3px solid var(--accent); background: var(--bg-card);
+    padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 32px 0; font-size: 14px; color: var(--text-dim);
+  }
+  .rule b { color: var(--text); }
+  .cta {
+    margin-top: 48px; padding: 24px; background: var(--bg-card);
+    border: 1px solid var(--border); border-radius: 12px; text-align: center;
+  }
+  .cta a.btn {
+    display: inline-block; margin-top: 12px; padding: 12px 24px; border-radius: 8px;
+    background: var(--accent); color: #06110c; font-weight: 600; text-decoration: none;
+  }
+  .cta p { color: var(--text-dim); font-size: 14px; margin: 0; }
+  footer { margin-top: 48px; color: var(--text-dim); font-size: 13px; text-align: center; }
+  footer a { color: var(--text-dim); }
+  @media print {
+    :root { --bg: #fff; --bg-card: #fff; --border: #ccc; --text: #111; --text-dim: #555; --accent: #067a4e; --accent-2: #067a4e; }
+    .cta, footer { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>AI Idea Validation <span>Checklist</span></h1>
+  <p class="lead">25 checks to run <em>before</em> building your AI product or service. If you can't tick a box, that's your next task — not a reason to skip it.</p>
+  <p class="meta">From the <a href="https://msdw.github.io/awesome-ai-hub/">Awesome AI Builder Series</a> · print or save as PDF (Ctrl/Cmd+P) · CC BY 4.0</p>
+
+  <h2>1. Problem</h2>
+  <p class="section-note">A good problem is frequent, costly, and currently handled badly.</p>
+  <ul class="checks">
+    <li><b>I can state the problem in one sentence</b><span class="why">"[Role] struggles to [task] because [root cause], which leads to [consequence]."</span></li>
+    <li><b>The problem is frequent</b><span class="why">It happens weekly or daily — not once a year.</span></li>
+    <li><b>The problem is costly</b><span class="why">I can estimate what it costs the user in time, money, or risk.</span></li>
+    <li><b>I know how people handle it today</b><span class="why">Spreadsheets, interns, agencies, ignoring it — the current workaround is my real competitor.</span></li>
+    <li><b>I found 3+ independent public signals</b><span class="why">Forum threads, job posts, reviews, support tickets that mention this pain. Assumptions without evidence are just opinions.</span></li>
+  </ul>
+
+  <h2>2. Customer</h2>
+  <p class="section-note">Pain without a buyer is a hobby, not a business.</p>
+  <ul class="checks">
+    <li><b>I can name my primary segment precisely</b><span class="why">Role, industry, company size, geography — not "businesses" or "everyone".</span></li>
+    <li><b>I know who is NOT my customer</b><span class="why">Explicit exclusions keep the scope honest.</span></li>
+    <li><b>I know who owns the budget</b><span class="why">The person who feels the pain is often not the person who signs.</span></li>
+    <li><b>I've talked to 5+ potential customers</b><span class="why">Real conversations, not surveys of friends. Ask about the problem, don't pitch the solution.</span></li>
+    <li><b>At least 3 of them described the pain unprompted</b><span class="why">If you have to explain why it's a problem, it isn't one.</span></li>
+  </ul>
+
+  <h2>3. Market</h2>
+  <p class="section-note">Small validated beats big imagined.</p>
+  <ul class="checks">
+    <li><b>People already pay to solve this</b><span class="why">Existing spend (tools, services, headcount) is the best proof of willingness to pay.</span></li>
+    <li><b>I can name 3 existing alternatives</b><span class="why">Zero competition usually means zero demand.</span></li>
+    <li><b>I know why now</b><span class="why">What changed (tech, regulation, cost) that makes this solvable today?</span></li>
+    <li><b>I can reach this segment repeatably</b><span class="why">A named channel — community, LinkedIn, partnerships — not "word of mouth".</span></li>
+    <li><b>The niche is big enough for my goal</b><span class="why">Rough math: reachable buyers × plausible price vs. what I want to earn.</span></li>
+  </ul>
+
+  <h2>4. AI Fit</h2>
+  <p class="section-note">AI must be the best way to solve it — not just a way.</p>
+  <ul class="checks">
+    <li><b>AI is genuinely needed</b><span class="why">If a form, a template, or a rule engine solves it, build that instead — it's cheaper and more reliable.</span></li>
+    <li><b>The task tolerates imperfection</b><span class="why">AI output is probabilistic. Drafts and suggestions: fine. Irreversible decisions: dangerous.</span></li>
+    <li><b>A human review step exists where stakes are high</b><span class="why">Legal, medical, financial outputs need a human in the loop — plan for it in the workflow and the pricing.</span></li>
+    <li><b>I have (or can get) the data the AI needs</b><span class="why">Access to the user's documents, context, or history — with their permission.</span></li>
+    <li><b>I've checked compliance basics</b><span class="why">GDPR, sector rules, data residency. Regulated domains need compliance notes before code.</span></li>
+  </ul>
+
+  <h2>5. Commitment Test</h2>
+  <p class="section-note">Validation ends with a commitment, not a compliment.</p>
+  <ul class="checks">
+    <li><b>I can deliver value manually first</b><span class="why">A concierge version (you + AI tools behind the scenes) tests demand before you build product.</span></li>
+    <li><b>I have a testable offer</b><span class="why">One sentence: what they get, in what timeframe, for what price.</span></li>
+    <li><b>Someone has pre-committed</b><span class="why">A paid pilot, a signed LOI, a deposit — anything stronger than "sounds cool, keep me posted".</span></li>
+    <li><b>I know my kill criteria</b><span class="why">Decide in advance what result means "stop" — e.g. fewer than 2 committed pilots after 20 conversations.</span></li>
+    <li><b>I have a 7-day next step</b><span class="why">Validation momentum dies in weeks, not months. What will you test this week?</span></li>
+  </ul>
+
+  <div class="rule">
+    <b>Rule of thumb:</b> 20+ boxes ticked → start a manual pilot. 12–19 → keep validating, don't build yet. Under 12 → the idea isn't ready; go back to problem discovery. Building is the most expensive way to validate.
+  </div>
+
+  <div class="cta">
+    <p><b>Next step:</b> the full 15-step methodology, canvases and templates are free in the series.</p>
+    <a class="btn" href="https://msdw.github.io/awesome-ai-hub/">Explore the Awesome AI Builder Series →</a>
+  </div>
+
+  <footer>
+    Compiled from the <a href="https://github.com/msdw/awesome-ai-business-blueprint">Awesome AI Business Blueprint</a> (steps 1–3) · Maintained by <a href="mailto:mathurin.ache@advanthink.com">Advanthink</a>
+  </footer>
+
+</div>
+</body>
+</html>

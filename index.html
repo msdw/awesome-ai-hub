@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Awesome AI Builder Series</title>
 <meta name="description" content="Four curated, anti-hype repositories to go from AI idea to venture, business, and revenue.">
+<meta property="og:title" content="Awesome AI Builder Series">
+<meta property="og:description" content="From AI idea to real revenue — 4 curated, open-source playbooks. No hype, just structure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://msdw.github.io/awesome-ai-hub/">
+<meta property="og:image" content="https://msdw.github.io/awesome-ai-hub/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Awesome AI Builder Series">
+<meta name="twitter:description" content="From AI idea to real revenue — 4 curated, open-source playbooks. No hype, just structure.">
+<link rel="canonical" href="https://msdw.github.io/awesome-ai-hub/">
 <style>
   :root {
     --bg: #0b0d12;
@@ -223,6 +232,39 @@
   </div>
 </section>
 
+<section id="start-here">
+  <div class="wrap">
+    <h2>Not sure where to start?</h2>
+    <p class="section-sub">Answer three quick questions.</p>
+
+    <div class="quiz form-box" style="max-width:560px; text-align:left;">
+      <div class="quiz-step" data-step="1">
+        <p style="color:var(--text); font-weight:600;">1. Where are you today?</p>
+        <button class="btn btn-ghost quiz-opt" data-q="stage" data-v="idea">I don't have an idea yet</button>
+        <button class="btn btn-ghost quiz-opt" data-q="stage" data-v="validate">I have an idea to validate</button>
+        <button class="btn btn-ghost quiz-opt" data-q="stage" data-v="build">I'm building — need structure</button>
+        <button class="btn btn-ghost quiz-opt" data-q="stage" data-v="sell">I have something — need revenue</button>
+      </div>
+      <div class="quiz-step" data-step="2" hidden>
+        <p style="color:var(--text); font-weight:600;">2. What are you making?</p>
+        <button class="btn btn-ghost quiz-opt" data-q="kind" data-v="product">A product (SaaS, app, tool)</button>
+        <button class="btn btn-ghost quiz-opt" data-q="kind" data-v="service">A service (consulting, agency, freelance)</button>
+      </div>
+      <div class="quiz-step" data-step="3" hidden>
+        <p style="color:var(--text); font-weight:600;">3. How much structure do you want?</p>
+        <button class="btn btn-ghost quiz-opt" data-q="depth" data-v="fast">Fast playbooks — actionable this week</button>
+        <button class="btn btn-ghost quiz-opt" data-q="depth" data-v="full">Full methodology — step by step</button>
+      </div>
+      <div class="quiz-result" hidden>
+        <p style="color:var(--text); font-weight:600;">Start here:</p>
+        <p class="quiz-reco"></p>
+        <a class="btn btn-primary quiz-link" href="#" target="_blank" rel="noopener">Go →</a>
+        <button class="btn btn-ghost quiz-restart" style="margin-left:8px;">Restart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="subscribe">
   <div class="wrap">
     <div class="form-box">
@@ -231,11 +273,13 @@
 
       <!-- Formspree: replace YOUR_FORM_ID with the ID from your Formspree dashboard -->
       <form id="subscribe-form" action="https://formspree.io/f/xqevgbky" method="POST">
+        <input type="hidden" name="_next" value="https://msdw.github.io/awesome-ai-hub/checklist.html">
         <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
       <p class="success-msg" id="success-msg">✓ You're in. Check your inbox to confirm.</p>
       <p class="form-note">One email per week. Unsubscribe anytime.</p>
+      <p class="form-note">🎁 Subscriber bonus: the <a href="checklist.html" style="color:var(--accent-2);">AI Idea Validation Checklist</a> — 25 checks before you build.</p>
     </div>
   </div>
 </section>
@@ -270,12 +314,24 @@
   </div>
 </section>
 
+<section id="partners">
+  <div class="wrap">
+    <h2>Series Partners</h2>
+    <p class="section-sub">Platforms supporting the series across all 4 repos.</p>
+    <div class="form-box" style="max-width:560px;">
+      <p style="margin:0;">Your logo here — become the first <b style="color:var(--text);">Series Partner</b> and reach AI builders, founders, and consultants across the whole series.</p>
+      <a class="btn btn-primary" style="margin-top:16px;" href="https://github.com/msdw/awesome-ai-idea-engine/blob/main/SPONSORS.md" target="_blank" rel="noopener">Become a partner →</a>
+    </div>
+  </div>
+</section>
+
 <section id="sponsor">
   <div class="wrap">
     <h2>Sponsor the series</h2>
     <p class="section-sub">Reach AI builders, founders, and consultants across all 4 repos.</p>
     <div class="cta-row">
       <a class="btn btn-ghost" href="https://github.com/msdw/awesome-ai-idea-engine/blob/main/SPONSORS.md" target="_blank" rel="noopener">View sponsorship tiers →</a>
+      <a class="btn btn-ghost" href="badge.html">Listed here? Get your badge →</a>
     </div>
   </div>
 </section>
@@ -285,6 +341,73 @@
     <p>Maintained by <a href="mailto:mathurin.ache@advanthink.com">Advanthink</a> · Content licensed CC BY 4.0 · Scripts licensed MIT</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var answers = {};
+  var quiz = document.querySelector('.quiz');
+  if (!quiz) return;
+
+  var RECOS = {
+    idea:     { name: 'Awesome AI Idea Engine', why: '100+ scored AI ideas to find a problem worth solving.', url: 'https://github.com/msdw/awesome-ai-idea-engine' },
+    validate: { name: 'Validate an AI Idea in 7 Days', why: 'A one-week validation playbook before you write any code.', url: 'https://github.com/msdw/awesome-ai-venture-playbook/blob/main/playbooks/validate-an-ai-idea-in-7-days.md' },
+    build_fast_product:  { name: 'Launch an AI Micro-SaaS', why: 'A launch playbook for small, focused AI products.', url: 'https://github.com/msdw/awesome-ai-venture-playbook/blob/main/playbooks/launch-an-ai-micro-saas.md' },
+    build_fast_service:  { name: 'Launch an AI Automation Offer', why: 'A playbook to package and sell an AI service fast.', url: 'https://github.com/msdw/awesome-ai-venture-playbook/blob/main/playbooks/launch-an-ai-automation-offer.md' },
+    build_full: { name: 'Awesome AI Business Blueprint', why: 'The full 15-step methodology with canvases and templates.', url: 'https://github.com/msdw/awesome-ai-business-blueprint' },
+    sell:     { name: 'Awesome AI Monetization Playbook', why: '17 monetization models, pricing patterns, and offer templates.', url: 'https://github.com/msdw/awesome-ai-monetization-playbook' }
+  };
+
+  function resolve() {
+    if (answers.stage === 'idea') return RECOS.idea;
+    if (answers.stage === 'validate') return RECOS.validate;
+    if (answers.stage === 'sell') return RECOS.sell;
+    if (answers.depth === 'full') return RECOS.build_full;
+    return answers.kind === 'service' ? RECOS.build_fast_service : RECOS.build_fast_product;
+  }
+
+  function show(step) {
+    quiz.querySelectorAll('.quiz-step').forEach(function (s) { s.hidden = true; });
+    quiz.querySelector('.quiz-result').hidden = true;
+    if (step) {
+      var el = quiz.querySelector('.quiz-step[data-step="' + step + '"]');
+      if (el) { el.hidden = false; return; }
+    }
+    var reco = resolve();
+    quiz.querySelector('.quiz-reco').innerHTML = '<b style="color:var(--accent);">' + reco.name + '</b><br>' + reco.why;
+    var link = quiz.querySelector('.quiz-link');
+    link.href = reco.url;
+    quiz.querySelector('.quiz-result').hidden = false;
+  }
+
+  quiz.addEventListener('click', function (e) {
+    var btn = e.target.closest('.quiz-opt');
+    if (btn) {
+      answers[btn.dataset.q] = btn.dataset.v;
+      // idea / validate / sell resolve immediately; build asks 2 more questions
+      if (btn.dataset.q === 'stage') {
+        show(answers.stage === 'build' ? 2 : null);
+      } else if (btn.dataset.q === 'kind') {
+        show(3);
+      } else {
+        show(null);
+      }
+      return;
+    }
+    if (e.target.closest('.quiz-restart')) {
+      answers = {};
+      show(1);
+    }
+  });
+
+  // quiz option layout
+  quiz.querySelectorAll('.quiz-opt').forEach(function (b) {
+    b.style.display = 'block';
+    b.style.width = '100%';
+    b.style.textAlign = 'left';
+    b.style.marginTop = '8px';
+  });
+})();
+</script>
 
 </body>
 </html>
